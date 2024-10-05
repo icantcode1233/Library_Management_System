@@ -1,0 +1,42 @@
+{% extends "parent.html" %}
+{% block main %}
+{% load static %}
+<h1 style="text-align: center;">This is About Us Page</h1>
+<main class="container">
+    <section class="team-members">
+        <h2 style="font-weight:bold">Our Team</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-5 mb-4">
+                <div>
+                    <img src="{% static 'images/employee1.jpeg' %}" class="employe" alt="Team Member 1" style="width:200px;height:200px;">
+                    <h3>John Doe</h3>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-5 mb-4">
+                <div >
+                    <img src="{% static 'images/employee2.jpeg' %}"  class="employe" alt="Team Member 2" style="width:200px;height:200px;">
+                    <h3>Jane Smith</h3>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-5 mb-4">
+                <div>
+                    <img src="{% static 'images/employee3.jpg' %}" class="employe" alt="Team Member 2" style="width:200px;height:200px;"/>
+                    <h3>Jane Smith</h3>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-5 mb-4">
+                <div >
+                    <img src="{% static 'images/employee4.jpeg' %}" class="employe" alt="Team Member 2" style="width:200px;height:200px;">
+                    <h3>Jane Smith</h3>
+                </div>
+            </div>
+            <!-- Add more team members here -->
+        </div>
+        <p style="text-align:left;">A Library Management System (LMS) is a digital solution designed to streamline and enhance the management of libraries, making the process of cataloging, organizing, and accessing resources more efficient. It serves as the backbone of any library, whether in educational institutions, public facilities, or corporate settings.
+
+            One of the primary advantages of an LMS is its ability to simplify the cataloging and tracking of a vast array of resources, including books, journals, multimedia materials, and digital content. It enables librarians to create comprehensive databases, categorize materials, and maintain up-to-date records of acquisitions, loans, and returns. Patrons, in turn, benefit from user-friendly interfaces that allow them to search for, reserve, and check out materials seamlessly.</p>
+    </section>
+{% endblock main%}

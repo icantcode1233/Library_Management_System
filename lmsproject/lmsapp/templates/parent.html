@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Library Management System</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</head>
+<style>
+footer {
+    background-color: #3333337c; /* Background color of the footer */
+    color: #fff; /* Text color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align the text */
+}
+
+.footer-content {
+    font-size: 14px; /* Font size for the text */
+}
+
+
+</style>
+<body>
+    <div class="container">
+      <marquee behavior="" direction="">
+        <div class="row bg-danger text-light">
+            <div class="col-sm-4" style="text-align: center;">Contact No:- 9087654323</div>
+            <div class="col-sm-4" style="text-align: center;">Email:-ujjwal@gmail.com</div>
+            <div class="col-sm-4" style="text-align: center;">Follow Us</div>
+        </div>
+      </marquee>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="max-width:100%">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="{% static 'images/logo.jpg' %}" style="width:50px;height:50px;"alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'lmsapp:index' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lmsapp:aboutus' %}">About Us</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lmsapp:registration' %}">Registration</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lmsapp:login' %}">Login</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lmsapp:contact' %}">Contact Us</a>
+                  </li> 
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <div id="carouselExample" class="carousel slide">
+  
+  {% block main %}
+
+
+  {% endblock main %}
+</div>
+</div>
+<footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Ujjwal Goyal. All Rights Reserved.</p>
+        </div>
+</footer>
+
+</body>
+</html>
